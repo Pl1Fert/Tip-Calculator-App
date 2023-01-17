@@ -1,0 +1,35 @@
+@import url(../../styles/Colors.css);
+
+.display {
+    background-color: var(--Very-dark-cyan);
+    border-radius: 10px;
+    padding: 35px;
+    display: flex;
+    flex-direction: column;
+    gap: 45px;
+    min-width: 410px;
+}
+
+.item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.title {
+    color: var(--White);
+}
+
+.subtitle {
+    color: var(--Grayish-cyan);
+    font-size: 14px;
+}
+
+.value {
+    color: var(--Strong-cyan);
+    font-size: 48px;
+}
+
+.resetBtn {
+    margin-top: auto;
+}

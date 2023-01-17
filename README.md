@@ -1,1 +1,1 @@
-# Tip Calculator application
+# Tip Calculator Application

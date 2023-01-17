@@ -1,0 +1,33 @@
+@import url(../../styles/Colors.css);
+
+.myInput {
+    width: 100%;
+    outline: none;
+    background-color: var(--Very-light-grayish-cyan);
+    padding: 10px 15px;
+    border: 2px solid transparent;
+    text-align: right;
+    font: inherit;
+    font-size: 20px;
+    border-radius: 5px;
+    color: var(--Light-grayish-cyan);
+}
+
+.myInput:focus {
+    border-color: var(--Strong-cyan);
+    color: var(--Very-dark-cyan);
+}
+
+.myInput:invalid {
+    border-color: var(--Red);
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type="number"] {
+    -moz-appearance: textfield;
+}
