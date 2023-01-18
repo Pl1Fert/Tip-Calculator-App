@@ -3,8 +3,20 @@ import MyInput from "../MyInput/MyInput";
 import TipBtn from "../TipBtn/TipBtn";
 import dollarIcon from "../../images/icon-dollar.svg";
 import personIcon from "../../images/icon-person.svg";
+import { useState } from "react";
 
-const CalculatorForm = ({ billAmount, peopleAmount,setPeopleAmount, setBillAmount, setTipValue }) => {
+const CalculatorForm = ({
+    billAmount,
+    peopleAmount,
+    setPeopleAmount,
+    setBillAmount,
+    setTipValue,
+    type,
+    setType,
+    inputTip,
+    setInputTip
+}) => {
+
     return (
         <div className={classes.form}>
             <div className={classes.item}>
@@ -12,10 +24,11 @@ const CalculatorForm = ({ billAmount, peopleAmount,setPeopleAmount, setBillAmoun
                     Bill
                 </label>
                 <MyInput
-                    type="number"
+                    type="text"
                     value={billAmount}
-                    id="bill"
+                    id={classes.bill}
                     placeholder="0"
+                    pattern="^(?=.+)(?:[1-9]\d*|0)?(?:\.\d+)?$"
                     onChange={(e) => setBillAmount(e.target.value)}
                 />
                 <img
@@ -29,19 +42,54 @@ const CalculatorForm = ({ billAmount, peopleAmount,setPeopleAmount, setBillAmoun
                 <label className={classes.title}>Select Tip %</label>
                 <div className={classes.buttonsWrapper}>
                     <div className={classes.buttonsRow}>
-                        <TipBtn value={"5%"} setTipValue={setTipValue} />
-                        <TipBtn value={"10%"} setTipValue={setTipValue} />
-                        <TipBtn value={"15%"} setTipValue={setTipValue} />
+                        <TipBtn
+                            value={"5%"}
+                            setTipValue={setTipValue}
+                            type={type}
+                            setType={setType}
+                        />
+                        <TipBtn
+                            value={"10%"}
+                            setTipValue={setTipValue}
+                            type={type}
+                            setType={setType}
+                        />
+                        <TipBtn
+                            value={"15%"}
+                            setTipValue={setTipValue}
+                            type={type}
+                            setType={setType}
+                        />
                     </div>
                     <div className={classes.buttonsRow}>
-                        <TipBtn value={"25%"} setTipValue={setTipValue} />
-                        <TipBtn value={"50%"} setTipValue={setTipValue} />
-                        <input
-                            className={classes.customInput}
-                            type="number"
+                        <TipBtn
+                            value={"25%"}
+                            setTipValue={setTipValue}
+                            type={type}
+                            setType={setType}
+                        />
+                        <TipBtn
+                            value={"50%"}
+                            setTipValue={setTipValue}
+                            type={type}
+                            setType={setType}
+                        />
+                        <MyInput
+                            type="text"
                             placeholder="Custom"
+                            value={inputTip}
+                            id={classes.tip}
+                            pattern="^[1-9]{1}[0-9]*$"
                             onChange={(e) => {
-                                setTipValue(Number(e.target.value));
+                                setInputTip(e.target.value);
+                            }}
+                            onKeyDown={(e) => {
+                                if (e.key === "Enter") {
+                                    if (e.target.value.length > 0) {
+                                        setTipValue(inputTip);
+                                        setType('');
+                                    }
+                                }
                             }}
                         />
                     </div>
@@ -52,10 +100,11 @@ const CalculatorForm = ({ billAmount, peopleAmount,setPeopleAmount, setBillAmoun
                     Number of People
                 </label>
                 <MyInput
-                    type="number"
+                    type="text"
                     value={peopleAmount}
-                    id="people"
+                    id={classes.people}
                     placeholder="0"
+                    pattern="^[1-9]{1}[0-9]*$"
                     onChange={(e) => setPeopleAmount(e.target.value)}
                 />
                 <img

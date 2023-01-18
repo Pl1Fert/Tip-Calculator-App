@@ -1,13 +1,21 @@
 import React from "react";
 import classes from "./ResetBtn.module.css";
 
-const ResetBtn = ({setTipValue, setPeopleAmount, setBillAmount}) => {
+const ResetBtn = ({
+    setTipValue,
+    setPeopleAmount,
+    setBillAmount,
+    setType,
+    setInputTip,
+}) => {
     const resetAll = () => {
         setTipValue(0);
-        setPeopleAmount(0);
-        setBillAmount(0);
+        setPeopleAmount("");
+        setBillAmount("");
+        setType("");
+        setInputTip("");
     };
-    
+
     return (
         <button
             className={classes.btn}

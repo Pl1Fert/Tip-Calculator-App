@@ -4,9 +4,11 @@ import CalculatorDisplay from "../Display/CalculatorDisplay";
 import { useState, useMemo } from "react";
 
 const Calculator = () => {
-    const [peopleAmount, setPeopleAmount] = useState(0);
-    const [billAmount, setBillAmount] = useState(0);
-    const [tipValue, setTipValue] = useState(0);
+    const [peopleAmount, setPeopleAmount] = useState("");
+    const [billAmount, setBillAmount] = useState("");
+    const [tipValue, setTipValue] = useState("");
+    const [typeBtn, setTypeBtn] = useState("");
+    const [inputTip, setInputTip] = useState("");
 
     const tipAmount = useMemo(() => {
         return billAmount * (tipValue / 100);
@@ -31,7 +33,12 @@ const Calculator = () => {
                 billAmount={billAmount}
                 setPeopleAmount={setPeopleAmount}
                 setBillAmount={setBillAmount}
+                tipValue={tipValue}
                 setTipValue={setTipValue}
+                type={typeBtn}
+                setType={setTypeBtn}
+                inputTip={inputTip}
+                setInputTip={setInputTip}
             />
             <CalculatorDisplay
                 tipPerPerson={tipPerPerson}
@@ -39,6 +46,8 @@ const Calculator = () => {
                 setTipValue={setTipValue}
                 setPeopleAmount={setPeopleAmount}
                 setBillAmount={setBillAmount}
+                setType={setTypeBtn}
+                setInputTip={setInputTip}
             />
         </div>
     );

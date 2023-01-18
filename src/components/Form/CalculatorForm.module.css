@@ -62,48 +62,38 @@
     }
 }
 
-.customInput {
-    outline: none;
-    border: 2px solid transparent;
-    font: inherit;
-    font-size: 20px;
-    border-radius: 5px;
-    background-color: var(--Very-light-grayish-cyan);
-    color: var(--Very-dark-cyan);
+#bill,
+#people {
+    padding: 10px 15px;
+    width: 100%;
+}
+
+#tip {
     width: 120px;
     height: 45px;
     padding: 0 10px;
-    text-align: right;
 }
 
 @media screen and (max-width: 950px) {
-    .customInput {
+    #tip {
         width: 100%;
     }
 }
 
-.customInput:focus {
-    border-color: var(--Strong-cyan);
-    color: var(--Very-dark-cyan);
+#tip::-webkit-input-placeholder {
+    text-align: center;
 }
 
-.customInput:invalid {
-    border-color: var(--Red);
+#tip:-moz-placeholder {
+    /* Firefox 18- */
+    text-align: center;
 }
 
-.customInput::-webkit-input-placeholder {
-    text-align:center;
-    }
-    
-    :-moz-placeholder { /* Firefox 18- */
-       text-align:center;  
-    }
-    
-    ::-moz-placeholder {  /* Firefox 19+ */
-       text-align:center;  
-    }
-    
-    :-ms-input-placeholder {  
-       text-align:center; 
-    }
-    
+#tip::-moz-placeholder {
+    /* Firefox 19+ */
+    text-align: center;
+}
+
+#tip:-ms-input-placeholder {
+    text-align: center;
+}

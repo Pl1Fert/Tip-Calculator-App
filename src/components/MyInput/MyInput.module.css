@@ -1,16 +1,14 @@
 @import url(../../styles/Colors.css);
 
 .myInput {
-    width: 100%;
     outline: none;
     background-color: var(--Very-light-grayish-cyan);
-    padding: 10px 15px;
     border: 2px solid transparent;
     text-align: right;
     font: inherit;
     font-size: 20px;
     border-radius: 5px;
-    color: var(--Light-grayish-cyan);
+    color: var(--Very-dark-cyan);
 }
 
 .myInput:focus {
@@ -22,35 +20,30 @@
     border-color: var(--Red);
 }
 
-input::-webkit-outer-spin-button,
-input::-webkit-inner-spin-button {
-    -webkit-appearance: none;
-    margin: 0;
-}
-
-input[type="number"] {
-    -moz-appearance: textfield;
-    appearance: textfield;
-}
-
-::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+::-webkit-input-placeholder {
+    /* WebKit, Blink, Edge */
     color: var(--Light-grayish-cyan);
 }
-:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+:-moz-placeholder {
+    /* Mozilla Firefox 4 to 18 */
     color: var(--Light-grayish-cyan);
-   opacity:  1;
+    opacity: 1;
 }
-::-moz-placeholder { /* Mozilla Firefox 19+ */
+::-moz-placeholder {
+    /* Mozilla Firefox 19+ */
     color: var(--Light-grayish-cyan);
-   opacity:  1;
+    opacity: 1;
 }
-:-ms-input-placeholder { /* Internet Explorer 10-11 */
+:-ms-input-placeholder {
+    /* Internet Explorer 10-11 */
     color: var(--Light-grayish-cyan);
 }
-::-ms-input-placeholder { /* Microsoft Edge */
+::-ms-input-placeholder {
+    /* Microsoft Edge */
     color: var(--Light-grayish-cyan);
 }
 
-::placeholder { /* Most modern browsers support this now. */
+::placeholder {
+    /* Most modern browsers support this now. */
     color: var(--Light-grayish-cyan);
 }

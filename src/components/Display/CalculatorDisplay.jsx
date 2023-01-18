@@ -7,7 +7,9 @@ const CalculatorDisplay = ({
     sumPerPerson,
     setTipValue,
     setPeopleAmount,
-    setBillAmount
+    setBillAmount,
+    setType,
+    setInputTip
 }) => {
     const isInfinite = (n) => n === n / 0;
 
@@ -43,6 +45,8 @@ const CalculatorDisplay = ({
                 setTipValue={setTipValue}
                 setPeopleAmount={setPeopleAmount}
                 setBillAmount={setBillAmount}
+                setType={setType}
+                setInputTip={setInputTip}
             />
         </div>
     );
