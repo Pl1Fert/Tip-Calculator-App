@@ -1,0 +1,20 @@
+@import url(../../styles/Colors.css);
+
+.btn {
+    outline: none;
+    border: none;
+    width: 100%;
+    padding: 10px 0;
+    color: var(--Very-dark-cyan);
+    background-color: var(--Strong-cyan);
+    transition: all .3s linear;
+    font: inherit;
+    font-size: 20px;
+    border-radius: 5px;
+    margin-top: auto;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: var(--Light-grayish-cyan);
+}

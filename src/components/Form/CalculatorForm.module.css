@@ -1,4 +1,109 @@
+@import url(../../styles/Colors.css);
+
 .form {
     min-width: 410px;
     max-width: 410px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 45px;
 }
+
+@media screen and (max-width: 500px) {
+    .form {
+        max-width: 100%;
+        min-width: 100%;
+    }
+}
+
+.title {
+    color: var(--Grayish-cyan);
+}
+
+.item {
+    position: relative;
+}
+
+.icon {
+    position: absolute;
+    top: 54%;
+    left: 3%;
+    z-index: 2;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.buttonsWrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+@media screen and (max-width: 950px) {
+    .buttonsWrapper {
+        flex-direction: row;
+    }
+}
+
+.buttonsRow {
+    display: flex;
+    gap: 15px;
+}
+
+@media screen and (max-width: 950px) {
+    .buttonsRow {
+        flex-direction: column;
+        align-items: center;
+        flex: 1 1 50%;
+    }
+}
+
+.customInput {
+    outline: none;
+    border: 2px solid transparent;
+    font: inherit;
+    font-size: 20px;
+    border-radius: 5px;
+    background-color: var(--Very-light-grayish-cyan);
+    color: var(--Very-dark-cyan);
+    width: 120px;
+    height: 45px;
+    padding: 0 10px;
+    text-align: right;
+}
+
+@media screen and (max-width: 950px) {
+    .customInput {
+        width: 100%;
+    }
+}
+
+.customInput:focus {
+    border-color: var(--Strong-cyan);
+    color: var(--Very-dark-cyan);
+}
+
+.customInput:invalid {
+    border-color: var(--Red);
+}
+
+.customInput::-webkit-input-placeholder {
+    text-align:center;
+    }
+    
+    :-moz-placeholder { /* Firefox 18- */
+       text-align:center;  
+    }
+    
+    ::-moz-placeholder {  /* Firefox 19+ */
+       text-align:center;  
+    }
+    
+    :-ms-input-placeholder {  
+       text-align:center; 
+    }
+    

@@ -1,0 +1,26 @@
+@import url(../../styles/Colors.css);
+
+.btn {
+    outline: none;
+    border: none;
+    color: var(--White);
+    background-color: var(--Very-dark-cyan);
+    width: 120px;
+    height: 45px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all .3s linear;
+    font: inherit;
+    font-size: 20px;
+}
+
+.btn:hover {
+    color: var(--Very-dark-cyan);
+    background-color: var(--Light-grayish-cyan);
+}
+
+@media screen and (max-width: 950px) {
+    .btn {
+        width: 100%;
+    }
+}

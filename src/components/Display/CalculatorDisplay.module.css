@@ -8,6 +8,14 @@
     flex-direction: column;
     gap: 45px;
     min-width: 410px;
+    max-width: 410px;
+}
+
+@media screen and (max-width: 500px) {
+    .display {
+        min-width: 100%;
+        max-width: 100%;
+    }
 }
 
 .item {
@@ -28,8 +36,4 @@
 .value {
     color: var(--Strong-cyan);
     font-size: 48px;
-}
-
-.resetBtn {
-    margin-top: auto;
 }

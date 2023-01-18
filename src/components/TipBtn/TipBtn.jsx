@@ -1,9 +1,16 @@
-import React from 'react'
+import React from "react";
+import classes from './TipBtn.module.css';
 
-const TipBtn = () => {
-  return (
-    <div>TipBtn</div>
-  )
-}
+const TipBtn = ({ value, setTipValue }) => {
+    const onClick = () => {
+        setTipValue(Number(value.replace("%", "")));
+    };
 
-export default TipBtn
+    return (
+        <button className={classes.btn} name="tipBtn" type="button" onClick={() => onClick()}>
+            {value}
+        </button>
+    );
+};
+
+export default TipBtn;

@@ -30,4 +30,27 @@ input::-webkit-inner-spin-button {
 
 input[type="number"] {
     -moz-appearance: textfield;
+    appearance: textfield;
+}
+
+::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+    color: var(--Light-grayish-cyan);
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    color: var(--Light-grayish-cyan);
+   opacity:  1;
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+    color: var(--Light-grayish-cyan);
+   opacity:  1;
+}
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: var(--Light-grayish-cyan);
+}
+::-ms-input-placeholder { /* Microsoft Edge */
+    color: var(--Light-grayish-cyan);
+}
+
+::placeholder { /* Most modern browsers support this now. */
+    color: var(--Light-grayish-cyan);
 }
